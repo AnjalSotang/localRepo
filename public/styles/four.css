@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.About {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 200px;
+    margin-bottom: 60px;
+    /* background-color: aquamarine; */
+    height: 500px;
+    /* width: 100%; */
+}
+
+/* Styles for the left section */
+.leftSection {
+    font-weight: bold;
+    background-color: #181818;
+    padding: 10px;
+    /* text-align: center; */
+    width: 40%;
+    margin-left: 30px;
+    /* height: 600px; */
+}
+
+
+.leftSection h1{
+    margin-top: 50px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+    color: #0072d1;
+
+}
+
+.leftSection h3 {
+    font-size: 19px;
+    line-height: 1.6;
+    text-align:start;
+    color: #dddcdc;
+    margin-top: 30px;
+    margin-left: 45px;
+    margin-right: 180px;
+} 
+
+
+
+.leftSection .into h3 {
+    font-size: 19px;
+    line-height: 1.6;
+    text-align:start;
+    color: #dddcdc;
+    margin-top: 20px;
+    margin-left: 45px;
+    margin-right: 75px;
+} 
+
+
+
+
+
+.btn button[type="submit"] {
+    margin-top: 45px;
+    /* margin-left: 30px; */
+    width: calc(50% - 5px);
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.rightSection {
+    margin-left: 5px;
+    width: 40%;
+    position: relative; /* Ensure proper sizing */
+}
+
+.rightSection img {
+    width: 100%; /* Set image width to 100% */
+    height: 100%; /* Set image height to 100% */
+    object-fit:cover; /* Ensure the image covers the entire container */
+}
+
+.secondSection {
+
+    max-width: 80vw;
+    margin: auto;
+    text-align: center;
+    /* background-color: red; */
+}
+
+
+.secondSection h1{
+    margin-top: 90px;
+    font-size: 2rem; 
+}
+
+hr {
+    background-color: #0072d1;
+    height: 5px;
+    /* Set the height of the horizontal rule */
+    border: none;
+    /* Remove default border */
+    margin: 20px auto 40px auto;
+        width: 350px;
+}
+
+.routine {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Center the main div horizontally and vertically */
+    margin: auto; /* Optional: to ensure it's centered within its container */
+}
+
+.subDiv {
+    width: 600px;
+    height: 70px;
+    background-color: #333;
+    /* Adjust the background color as per your preference */
+    margin-bottom: 30px; /* Add margin to create spacing between subDivs */
+    border-radius: 5px; /* Add some rounded corners */
+    overflow: hidden; /* Hide any overflow content */
+    position: relative; /* Position for absolute pseudo-element */
+}
+
+.subDiv:hover {
+    background-color: #444; /* Change background color on hover */
+}
+
+
+.routine a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.subDiv h2 {
+    color: white;
+    margin-left: 20px; /* Adjust margin as needed */
+    margin-top: 20px;
+    position: relative;
+    z-index: 1; /* Ensure text appears above pseudo-element */
+}
+
+.subDiv::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.subDiv:hover::after {
+    opacity: 1; /* Show on hover */
+}
+
+

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.About {
+    display: flex;
+    margin-top: 60px;
+    margin-left: 200px;
+    margin-bottom: 60px;
+    /* background-color: aquamarine; */
+    height: 500px;
+    /* width: 100%; */
+}
+
+/* Styles for the left section */
+.leftSection {
+    font-weight: bold;
+    background-color: #181818;
+    padding: 10px;
+    /* text-align: center; */
+    width: 40%;
+    /* margin-left: 10px; */
+    /* height: 600px; */
+}
+
+.leftSection h1 {
+    /* font-size: 18px; */
+    line-height: 1.6;
+    text-align: start;
+    color: #dddcdc;
+    margin-top: 70px;
+    margin-left: 75px;
+    margin-right: 80px;
+}
+
+
+.btn button[type="submit"] {
+    margin-top: 45px;
+    /* margin-left: 30px; */
+    width: calc(50% - 5px);
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.btn button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.rightSection {
+    margin-left: 30px;
+    width: 40%;
+    position: relative; /* Ensure proper sizing */
+}
+
+.rightSection img {
+    width: 100%; /* Set image width to 100% */
+    height: 100%; /* Set image height to 100% */
+    object-fit:cover; /* Ensure the image covers the entire container */
+}
+
+.leftSection h2 {
+    margin-top: 20px; /* Adjusted margin top for h1 */
+    margin-bottom: 13px; /* Adjusted margin bottom for h1 */
+    margin-left: 45px;
+    color: #005ca9;
+}
+
+
+.secondSection {
+    max-width: 80vw;
+    margin: auto;
+    /* background-color: red; */
+}
+
+hr {
+    background-color: #0072d1;
+    height: 5px;
+    /* Set the height of the horizontal rule */
+    border: none;
+    /* Remove default border */
+    margin: 20px 0 40px 64px;
+    width: 350px;
+}
+
+
+
+/* Your existing CSS styles */
+.slider-container {
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 20px;
+    /* position: relative; */
+    /* overflow: hidden; */
+
+}
+
+.slider {
+    display: grid; /* Change display property to grid */
+    grid-template-columns: repeat(3, 1fr); /* Three columns in the grid */
+    grid-auto-rows: auto; /* Automatically adjust row height */
+    gap: 20px; /* Add gap between cards */
+    overflow-x: scroll;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    /* margin: 0 60px; */
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+
+.card {
+    flex: 0 0 auto;
+    /* width: 400px; */
+    /* height: 450px; */
+    /* margin: 3px; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adding transition for smooth effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle box shadow */
+}
+
+.card a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+.card:hover {
+    transform: translateY(-5px); /* Move card slightly upwards on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhance box shadow on hover */
+}
+
+.card .image {
+    /* border: 1px solid #191818; */
+    width: 365px;
+    margin: 7px;
+    height: 350px;
+}
+
+
+.card .image img {
+    object-fit: contain;
+    margin: 7px;
+    /* width: 365px; */
+    height: 340px;
+}
+
+.card h3 {
+    color: #9d9999; /* White text color */
+    /* text-align: center; */
+    margin: 18px 0;
+    margin-left: 15px;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.card h3:hover {
+    color: #0072d1; /* Pink color on hover */
+}
+
+ .view-training{
+            margin-top: 10px;
+            margin-left: 575px;
+            font-size: 17px;
+            font-weight: bolder;
+            background-color: #005ca9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.3s;
+        }
+
+        .view-training:hover {
+            font-weight: 100px;
+            font-size: 1.01rem;
+            background-color: #181818;
+            color: #ffff;
+        }
+
+

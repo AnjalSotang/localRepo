@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles/userProfile.css">
+    <!-- Linking to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+/* CSS for close icon */
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 40px; /* Increase the font size */
+    margin-top: 40px;
+    margin-right: 90px;
+}
+
+.close-icon:hover {
+    color: #9a4848;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+     <!-- Icon for close -->
+     <a href="/index" class="close-icon"><i class="fas fa-times"></i></a>
+    <div class="container">
+        <h1 class="heading">Profile</h1>
+        <p class="card-Date">Join Date: <%= user.JoinDate %></p>
+        <% if (user) { %>
+            <div class="card">
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <!-- Circular image section -->
+                    <div class="image-section">
+                        <img src="../Images/Anime.jpg" alt="Profile Picture" class="user-profile-image">
+                    </div>
+                    
+                    <!-- Inside the form -->
+                    <h5 class="card-title"><%= user.sub %></h5>
+                    <h3 class="card-name"><%= user.Name %></h3>
+                    <p class="card-subtitle"><%= user.bio %></p>
+                    <!-- Add other user details here -->
+                    <!-- Example: -->
+                    <!-- <p class="card-text">Address: <%= user.address %></p> -->
+                    
+                    <a href="/update-userData/<%= user.ID %>" class="button"`>Edit</a>
+                </div>
+            </div>
+        <% } else { %>
+            <p>No user logged in.</p>
+        <% } %>
+    </div>
+</body>
+</html>

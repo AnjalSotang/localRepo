@@ -1,0 +1,235 @@
+
+body {
+    background: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the form container */
+#loginForm{
+    width: 350px;
+    margin: 19vh auto 0 auto;
+    padding: 20px;
+    background: #000000 url('../Images/footer.jpeg') no-repeat center center fixed; 
+    border-radius: 8px;
+    font-size: 13px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the form heading */
+#loginForm .lh {
+    font-size: 35px;
+    font-weight: 900; /* Adjust the font weight to your preference */
+    color: #3367D6;
+    text-align: center;
+    transition: color 0.3s ease;
+    letter-spacing: 2px; /* Adjust the letter spacing to your preference */
+}
+
+#loginForm .signup {
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+    text-align: center; /* Align text within the flex container */
+}
+
+#loginForm .signup h3,
+#loginForm .signup a {
+    margin-left: 10px; /* Adjust spacing between text and link as needed */
+    font-size: 16px; /* Set font size */
+    text-decoration: none; /* Remove underline */
+}
+
+
+/* Hover effect for the form heading */
+#loginForm .lh:hover {
+    color: rgb(236, 111, 65);
+}
+
+/* Styling for the form submit button */
+#loginForm button {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    color: white;
+    background-color: #3367D6;
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for a pseudo-element before the form submit button */
+#loginForm button:before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Hover effect for the form submit button */
+#loginForm button:hover {
+    color: #FFFFFF;
+    font-weight: 30px;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for the pseudo-element before the form submit button */
+#Form button:hover:before {
+    opacity: 1;
+}
+
+.signup {
+    position: relative;
+    display: inline-block;
+}
+
+.signup a {
+    color: #3367D6;
+    text-decoration: none;
+    position: relative;
+}
+
+.signup a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust this value to control the distance of the line from the text */
+    width: 100%;
+    height: 2px; /* Adjust this value to control the thickness of the line */
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.signup a:hover::after {
+    background-color: #3367D6; /* Change this to the color you want for the line */
+}
+
+/* Styling for the form input controls */
+.input-control {
+    display: flex;
+    flex-direction: column;
+    margin: 9px 0;
+}
+
+/* .input-control input label{
+    color: #fff;
+} */
+
+/* Styling for the form input fields */
+.input-control input {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 12px;
+    width: 93%;
+    margin-bottom: 10px;
+}
+
+
+
+/* Styling for the form input fields when focused */
+.input-control input:focus {
+    outline: 0;
+}
+
+/* Styling for form input controls when they have a success state */
+.input-control.success input {
+    border-color: #00cc66;
+}
+
+/* Styling for form input controls when they have an error state */
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+/* Styling for the error message displayed below the form input controls */
+.input-control .error {
+    color: #cc3300;
+    font-size: 12px;
+    height: 5px;
+}
+
+
+    .btn {
+        margin-top: 15px;
+        /* position: relative; */
+    }
+
+    .btn a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none;
+        margin-left: 120px;
+        position: relative;
+    }
+
+    .btn a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px; /* Adjust this value to control the distance of the line from the text */
+        width: 100%;
+        height: 1.5px; /* Adjust this value to control the thickness of the line */
+        background-color: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn a:hover::after {
+        background-color: #fff; /* Change this to the color you want for the line */
+    }
+
+
+/* -------Styling for Social Networking LINKS---------- */
+.face {
+    width: 370px;
+    height: 40px; /* Set the height to match the width for a square div */
+    border-radius: 9px;
+    margin: 5vh auto 0 auto;
+    padding: 5px;
+    background-color: #f0f0f0; /* You can change this to your desired background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.face:hover{
+    background-color: skyblue;
+}
+  .face p{
+    font-size: 14px;
+    margin-left: 12px;
+    /* margin-right: 10px; */
+  }
+  .face a {
+    color:darkcyan;
+    font-size: 24px; 
+    text-decoration: none;
+  }
+
+  #face2{
+    margin: 3vh auto 0 auto;
+  }
+
+  #face2 a{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    background-color: #3367D6; 
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  

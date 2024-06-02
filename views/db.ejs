@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles/chest.css">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Nav Bar Section -->
+    <%- include('partials/header') %>
+        <div class="About">
+            <div class="leftSection" style="font-weight: bold; background-color: #181818;">
+                <h1>
+                    DEAD-LIFT, CARDIO AND ABS
+                </h1>
+
+                <div class="into">
+                    <h3>
+                        "Deadlifts, cardio, and abs—these are the three amigos of a solid workout routine. Deadlifts
+                        beef up your strength all over, while cardio gets your heart pumping and burns off those snacks
+                        you love. And let's not forget abs—crunches and planks give you that toned tummy you've been
+                        dreaming of. So, next time you hit the gym, don't forget to show some love to these three amigos
+                        for a killer workout!"
+                    </h3>
+                </div>
+
+
+            </div>
+            <div class="rightSection">
+                <img src="../Images/sam.gif" alt="David laid">
+
+            </div>
+        </div>
+
+
+        <div class="secondSection">
+            <h1>Routine</h1>
+            <hr>
+            <h3>NOTE: <span style="color:rgb(152, 148, 148)">Do some dynamic stretching/warm ups and start the
+                    routine.</span></h3>
+        </div>
+        <div class="routine">
+            <a href="/db" class="subDiv">
+                <div class="gif">
+                    <img src="../Images/db.gif" alt="Chest GIF">
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">1. Deadlifts </h3>
+                    <p>
+                        For Overall Strength: 2 warm up sets (rep 8 to 10), 3 working sets (rep 5 to 8) </p>
+                </div>
+            </a>
+
+            <a href="/db" class="subDiv">
+                <div class="gif">
+                    <img src="../Images/hang.gif" alt="Chest GIF">
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">5. Hanging Leg Raises</h3>
+                    <p>
+                        Lower Abs Focus Exercise. 3 working sets (rep 10 to 15) </p>
+                </div>
+            </a>
+
+            <a href="/db" class="subDiv">
+                <div class="gif">
+                    <img src="../Images/ccru.gif" alt="Chest GIF">
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">6. Cable Crunches</h3>
+                    <p>
+                        Upper Abs Focus Excercise. 3 working sets (rep 10 to 15) </p>
+                </div>
+            </a>
+
+            <a href="/db" class="subDiv">
+                <div class="gif">
+                    <img src="../Images/lra.gif" alt="Chest GIF">
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">7. Laying Leg Raises</h3>
+                    <p>
+                        Ab Excercise. 3 working sets (rep 10 to 15) </p>
+                </div>
+             </a>
+
+             <a href="/db" class="subDiv">
+                <div class="gif">
+                    <img src="../Images/car.gif" alt="Chest GIF">
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">7. Treadmill</h3>
+                    <p>
+                        Cario. 20 - 30 minites (walk or run) </p>
+                </div>
+             </a>
+
+
+           
+
+        </div>
+
+
+
+
+
+
+        <!-- <button class="view-training" onclick="location.href='#'">VIEW MORE</button> -->
+        </div>
+
+
+        <!-- Include footer -->
+        <%- include('partials/footer') %>
+
+            <!-- JS FOR NAV Bar -->
+            <script>
+                // Get the filename of the current page
+                var currentPage = location.pathname.split("/").pop();
+
+                // Function to add 'active' class to the appropriate navigation link
+                function setActiveNav() {
+                    var navLinks = document.querySelectorAll("nav ul li a");
+                    navLinks.forEach(function (link) {
+                        if (link.getAttribute("href").endsWith(currentPage)) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+
+                // Call the function to set the active navigation link
+                setActiveNav();
+
+            </script>
+
+
+            <!-- <script src="../JavaScript/index.js"></script> -->
+</body>
+
+</html>

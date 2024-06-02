@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles/four.css">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Nav Bar Section -->
+    <%- include('partials/header') %>
+        <div class="About">
+            <div class="rightSection">
+                <img src="../Images/black.jpg" alt="David laid">
+
+            </div>
+            <div class="leftSection" style="font-weight: bold; background-color: #181818;">
+                <h1>
+                    SUPER HERO ESSENTIALS
+                </h1>
+
+                <h3>
+                    Training Split: Chest
+                    Back, Legs/Abs,  Shoulders,
+                    Triceps/Biceps/Foreams, DEAD-LIFT/Cardio/ABS
+                </h3>
+
+                <div class="into">
+                    <h3>
+                    This workout plan is for
+                    intermediate and beginnner athletes who
+                    want to work out four times
+                    a week. It focuses on building
+                    strength, size, and enhancing
+                    aesthetics. Remember its not
+                    the quantity, its the quality
+                </h3>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="secondSection">
+            <h1>TRAINING PROGRAMS</h1>
+            <hr>
+        </div>
+        <div class="routine">
+            <a href="/cs" class="subDiv">
+                <h2>DAY-1  CHEST AND SIDE DELTS</h2>
+            </a>
+            <a href="/back" class="subDiv">
+                <h2>DAY-2  BACK AND REAR DELTS</h2>
+            </a>
+            <a href="/leg" class="subDiv">
+                <h2>DAY-3  LEGS AND ABS</h2>
+            </a>
+            <a href="/arm" class="subDiv">
+                <h2>DAY-4  TRICEP, BICEP AND FOREARM</h2>
+            </a>
+            <a href="/shoulder" class="subDiv">
+                <h2>DAY-5 SHOULDERS</h2>
+            </a>
+            <a href="/db" class="subDiv">
+                <h2>DAY-6 DEAD-LIFT, CARDIO AND ABS</h2>
+            </a>
+        </div>
+        
+        
+
+
+
+        <!-- <button class="view-training" onclick="location.href='#'">VIEW MORE</button> -->
+        </div>
+
+
+        <!-- Include footer -->
+        <%- include('partials/footer') %>
+
+            <!-- JS FOR NAV Bar -->
+            <script>
+                // Get the filename of the current page
+                var currentPage = location.pathname.split("/").pop();
+
+                // Function to add 'active' class to the appropriate navigation link
+                function setActiveNav() {
+                    var navLinks = document.querySelectorAll("nav ul li a");
+                    navLinks.forEach(function (link) {
+                        if (link.getAttribute("href").endsWith(currentPage)) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+
+                // Call the function to set the active navigation link
+                setActiveNav();
+
+            </script>
+
+
+            <!-- <script src="../JavaScript/index.js"></script> -->
+</body>
+
+</html>

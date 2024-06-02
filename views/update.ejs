@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- </style> -->
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #2D2E2D;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 400px;
+        margin: 90px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .input-control {
+        margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+    .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button[type="submit"] {
+            width: calc(50% - 5px);
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        button[type="submit"] a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+    .error-message {
+        background-color: #ffcccc;
+        color: #cc0000;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+    }
+
+    .card-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545; /* Red */
+    color: #fff; /* White */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.card-link:hover {
+    background-color: #c82333; /* Darker Red */
+}
+
+.card-link:active {
+    background-color: #bd2130; /* Even Darker Red */
+}
+
+.card-link:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.5); /* Add custom focus style */
+}
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+         <form id="SignUpForm" action="/auth/user_update" method="POST">
+        <% if (typeof messages !== 'undefined' && messages.error) { %>
+            <div class="error-message">
+                <p><%= messages.error %></p>
+            </div>
+        <% } %>
+        <h1>Update Profile</h1>      
+
+        <!-- Hidden input control for ID -->
+        <input type="hidden" value="<%= user.ID %>" name="hidden_id">
+
+        <!-- Input control for Name -->
+        <div class="input-control">
+           <input id="name" name="name" type="text" placeholder="Enter your full name" value="<%= user.Name %>" autocomplete="off">
+        </div>
+
+        <!-- Input control for Name -->
+        <div class="input-control">
+            <input id="sub" name="sub" type="text" placeholder="Enter Your User Name" autocomplete="off">
+        </div>
+
+        <!-- Input control for Name -->
+        <div class="input-control">
+            <input id="bio" name="bio" type="text" placeholder="Enter The Bio" autocomplete="off">
+        </div>
+
+        <!-- Input control for Email -->
+        <div class="input-control">
+
+            <input id="email" name="email" type="email" placeholder="Enter your Email" value="<%= user.Email %>" autocomplete="off">
+        </div>
+
+        <!-- Input control for Email -->
+        <div class="input-control">
+            <input id="phn" name="phn" type="text" placeholder="Add your contact number"  autocomplete="off">
+        </div>
+
+        <!-- Form submission button -->
+        <div class="button-group">
+            <button type="submit">Update</button>
+            <button type="submit">
+                <a href="/user">Back</a>
+            </button>
+        </div>
+         </form>
+    </div>
+    <a href="/delete-data/<%= user.ID %>" class="card-link">Deactive your account</a>
+</body>
+</html>

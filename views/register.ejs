@@ -1,0 +1,80 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles/register.css">
+    <style>
+        .error-message {
+            background-color: #f44336;
+            /* Red background */
+            color: #fff;
+            /* White text color */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Add a shadow for depth */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The main container for the form -->
+    <div class="container">
+        <% if (typeof messages !=='undefined' && messages.error) { %>
+            <div class="error-message">
+                <p>
+                    <%= messages.error %>
+                </p>
+            </div>
+            <% } %>
+
+        <!-- The form with the ID 'SignUpForm' and action set to '/' (root) -->
+        <form id="SignUpForm" action="/auth/register" method="POST">
+            <!-- Form heading -->
+            <div class="lh">Register</div>
+
+                    <div class="login">
+                        <h3>Already a member?</h3>
+                        <a href="/login">Log In</a>
+                    </div>
+
+                    <!-- Input control for First Name -->
+                    <div class="input-control">
+                        <input id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="off">
+                    </div>
+
+                    <!-- Input control for Email -->
+                    <div class="input-control">
+                        <input id="email" name="email" type="email" placeholder="Enter your Email" autocomplete="off">
+                    </div>
+                    
+                    <div class="input-control">
+                        <input id="date" name="date" type="date" placeholder="Date of Registraion"
+                            autocomplete="off">
+                    </div>
+
+                    <!-- Input control for Password -->
+                    <div class="input-control">
+                        <input id="password" name="password" type="password" placeholder="Password"
+                            autocomplete="new-password">
+                    </div>
+
+                    <!-- Input control for Confirm Password -->
+                    <div class="input-control">
+                        <input id="password2" name="password2" type="password" placeholder="Confirm Password"
+                            autocomplete="new-password">
+                    </div>
+
+
+                    <!-- Form submission button -->
+                    <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+
+</html>

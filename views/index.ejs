@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles/index.css">
+<style>
+    .slider a{
+    display: inline-block; /* Ensure the anchor tag takes the size of its content */
+    text-decoration: none;
+    color: inherit; /* Inherit the color from parent element */
+}
+       
+   </style>
+      
+</head>
+<body>
+   <!-- Nav Bar Section -->
+   <%- include('partials/header') %>
+   <section>
+    <section class="firstSection">
+        <div class="leftSection" style="font-weight: bold;">
+            EMPOWER YOUR BODY
+            <div class="first"><!-- Element to contain animated typing -->
+                <span id="element"></span>
+            </div>
+            <div class="desc" id="description" ;>
+                START your fitness journey Today with customized workout PLANS Strategically designed to enhance
+                strength, endurance, 
+                and aesthetics.
+            </div>
+
+            <button class="cUs" onclick="location.href='/program'">EXPLORE PROGRAM</button>
+
+        </div>
+        <div class="rightSection">
+            <img src="../Images/david.png" alt="David laid">
+
+        </div>
+    </section>
+
+    <div class="secondSection">
+        <h1 style="font-size: 2rem;">TRAINING PROGRAMS</h1>
+        <hr>
+        <div class="slider-container">
+            <div class="arrow prev">&#10094;</div>
+            <div class="slider">
+                <a href="/12" class="card">
+                    <div class="image"><img src="../Images/dd.jpg" alt="12 WEEK PROGRAM"></div>
+                    <h3>12 WEEK PROGRAM</h3>
+                </a>
+                <a href="/six" class="card">
+                    <div class="image"><img src="../Images/kaley.jpg" alt="6 DAY PROGRAM"></div>
+                    <h3>6 DAY PROGRAM</h3>
+                </a>
+                <a href="/five" class="card">
+                    <div class="image"><img src="../Images/black.jpg" alt="5 DAY PROGRAM"></div>
+                    <h3>5 DAY PROGRAM</h3>
+                </a>
+                <a href="/four" class="card">
+                    <div class="image"><img src="../Images/df.jpg" alt="4 DAY PROGRAM"></div>
+                    <h3>4 DAY PROGRAM</h3>
+                </a>
+                <a href="/four" class="card">
+                    <div class="image"><img src="../Images/fg.jpg" alt="HOME WORKOUT PROGRAM"></div>
+                    <h3>HOME WORKOUT PROGRAM</h3>
+                </a>
+            </div>
+            <div class="arrow next">&#10095;</div>
+        </div>
+
+        <button class="view-training" onclick="location.href='/program'">VIEW MORE</button>
+    </div>
+
+    <div class="third-section">
+        <div class="hd">
+            <p style="color: #0072d1; margin: 10px;">TESTIMONIALS</p>
+            <h1 style="padding: 7px;">DISCOVER WHAT OUR SATISFIED </h1>
+                <h1>CUSTOMERS HAVE TO SAY</h1>
+        </div>
+
+
+        <div class="slder">
+
+
+            <div class="testi">
+            <div class="hing">
+                <h2>"Finally found the perfect solution! Thank you for this amazing plan.</h2>
+                <h2>I've tried everything over the years, but this is the one that works."</h2>
+            </div>
+            <div class="profile">
+                <div class="profile-picture"><img src="../Images/nar.jpg" alt="cust"></div>
+                <div style="margin:  0 8px;">
+                    <h2 style="margin: 4px 0;">Naruto Kun</h2>
+                    <p style="color: #0072d1;">BIT Student</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="testi">
+            <div class="hing">
+                <h2>"Absolutely life-changing! I can't believe I didn't discover this sooner.</h2>
+                    <h2>Thank you for such an effective solution!"</h2>
+            </div>
+            <div class="profile">
+                <div class="profile-picture"><img src="../Images/denji.jpg" alt="cust"></div>
+                <div style="margin:  0 8px;">
+                    <h2 style="margin: 4px 0;">Denji</h2>
+                    <p style="color: #0072d1;">BIT Student</p>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="testi">
+            <div class="hing">
+                <h2>"This plan exceeded all my expectations. I'm thrilled with the results and </h2>
+                    <h2>can't thank you enough for providing such a game-changing strategy."</h2>
+            </div>
+            <div class="profile">
+                <div class="profile-picture"><img src="../Images/Anime.jpg" alt="cust"></div>
+                <div style="margin:  0 8px;">
+                    <h2 style="margin: 4px 0;">Megumi</h2>
+                    <p style="color: #0072d1;">BIT Student</p>
+                </div>
+            </div>
+            
+        </div>
+
+        </div>
+
+        </div>
+        <div class="fourth-section">
+            <div class="para">What are you waiting for ?</div>
+            <h2 style="padding: 3px;">Take the first step towards the healthier, stronger you</h2>
+            <h2>today with our fitness plan.</h2>
+            <button class="Join" onclick="location.href='/program'">CLICK HERE</button>
+        </div>
+        
+
+
+    <!-- Include footer -->
+    <%- include('partials/footer') %>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var typed = new Typed('#element', {
+                strings: ['Unleash your fitness potential', 'Maximize your fitness journey'],
+                typeSpeed: 50,
+                loop: true // Add looping for continuous typing
+            });
+        });
+
+    </script>
+
+    <script src="JavaScript/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+      <!-- Linking to the external CSS file -->
+      <link rel="stylesheet" href="styles/about.css">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Nav Bar Section -->
+    <%- include('partials/header') %> 
+        <div class="About">
+            <div class="leftSection" style="font-weight: bold; background-color: #181818;">
+               <h1>VISION AND GOALS</h1> 
+                <p> As a student and fitness enthusiast,
+                    I have continuously faced challenges
+                    such as creating a workout plan. It 
+                    took me years to understand how to 
+                    balance training and a healthy diet 
+                    with my studies. I have always wanted to live a healthy 
+                    lifestyle, so I created this website to 
+                    provide fitness and nutritional content 
+                    to those who are willing to start a 
+                    disciplined and healthy lifestyle. </p>
+                    <h2>Follow Me</h2> 
+                    <div class="s-links">
+                        <a href="https://www.instagram.com/" class="icon-link instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/" class="icon-link facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/" class="icon-link linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            
+            <div class="rightSection">
+                <img src="../Images/JDJFJGFJERKKEJM.jpg" alt="David laid">
+    
+            </div>
+
+        </div>
+
+    <!-- Include footer -->
+    <%- include('partials/footer') %>
+
+    <!-- JS FOR NAV Bar -->
+    <script>
+        // Get the filename of the current page
+        var currentPage = location.pathname.split("/").pop();
+
+        // Function to add 'active' class to the appropriate navigation link
+        function setActiveNav() {
+            var navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach(function (link) {
+                if (link.getAttribute("href").endsWith(currentPage)) {
+                    link.classList.add("active");
+                }
+            });
+        }
+
+        // Call the function to set the active navigation link
+        setActiveNav();
+
+    </script>
+
+
+    <!-- <script src="../JavaScript/index.js"></script> -->
+</body>
+
+</html>

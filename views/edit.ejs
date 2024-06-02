@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles/create.css">
+    <style>
+        .error-message {
+            background-color: #f44336;
+            /* Red background */
+            color: #fff;
+            /* White text color */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Add a shadow for depth */
+        }
+
+        /* CSS */
+        .tall-input {
+            height: 100px;
+            /* Set the initial height of the textarea */
+            /* Add any other styling properties as needed */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The main container for the form -->
+    <div class="container">
+        <!-- The form with the ID 'SignUpForm' and action set to '/auth/final_update' -->
+        <form id="SignUpForm" action="/auth/final_update" method="POST">
+            <!-- Form heading -->
+            <div class="lh">Update Operation</div>
+            <% if (typeof messages !== 'undefined' && messages.error) { %>
+                <div class="error-message">
+                    <p>
+                        <%= messages.error %>
+                    </p>
+                </div>
+            <% } %>
+
+            <!-- Hidden input control for ID -->
+            <input type="hidden" value="<%= result.id %>" name="hidden_id">
+
+            <!-- Input control for Name -->
+            <div class="input-control">
+                <input id="name" name="name" type="text" placeholder="Enter your full name" value="<%= result.name %>" autocomplete="off">
+            </div>
+
+            <!-- Input control for Email -->
+            <div class="input-control">
+                <input id="email" name="email" type="email" placeholder="Enter your Email" value="<%= result.email %>" autocomplete="off">
+            </div>
+
+            <!-- Textarea control for Feedback -->
+            <div class="input-control">
+                <textarea id="feed" name="feed" placeholder="Give Us Your Feedback" class="tall-input" rows="4"><%= result.feedback %></textarea>
+            </div>
+
+            <!-- Form submission button -->
+            <button type="submit">Update</button>
+            <button type="submit">
+                <a href="/data">Back</a>
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

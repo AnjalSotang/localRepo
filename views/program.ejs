@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles/program.css">
+
+    <style>
+        .btn a {
+            text-decoration: none;
+            color: inherit;
+            outline: none;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Nav Bar Section -->
+    <%- include('partials/header') %>
+        <div class="About">
+            <div class="leftSection" style="font-weight: bold; background-color: #181818;">
+                <h1> Essentials for Super
+                    Hero Physique - 6 - Day
+                    Training Program
+                    <a href="/super" class="btn"><button type="submit">View More</button></a>
+            </div>
+
+
+            <div class="rightSection">
+                <img src="../Images/black.jpg" alt="David laid">
+
+            </div>
+
+        </div>
+
+        <div class="secondSection">
+            <h1 style="font-size: 2rem; margin-left: 64px;">TRAINING PROGRAMS</h1>
+            <hr>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="card">
+                        <a href="/12">
+                            <div class="image"><img src="../Images/dd.jpg" alt="12 WEEK PROGRAM"></div>
+                            <h3>12 WEEK PROGRAM</h3>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/six">
+                            <div class="image"><img src="../Images/kaley.jpg" alt="6 DAY PROGRAM"></div>
+                            <h3>6 DAY PROGRAM</h3>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/five">
+                            <div class="image"><img src="../Images/bd.jpg" alt="5 DAY PROGRAM"></div>
+                            <h3>5 DAY PROGRAM</h3>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/four">
+                            <div class="image"><img src="../Images/df.jpg" alt="4 DAY PROGRAM"></div>
+                            <h3>4 DAY PROGRAM</h3>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="/four">
+                            <div class="image"><img src="../Images/fg.jpg" alt="HOME WORKOUT PROGRAM"></div>
+                            <h3>HOME WORKOUT PROGRAM</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <button class="view-training" onclick="location.href='#'">VIEW MORE</button> -->
+        </div>
+
+
+        <!-- Include footer -->
+        <%- include('partials/footer') %>
+
+            <!-- JS FOR NAV Bar -->
+            <script>
+                // Get the filename of the current page
+                var currentPage = location.pathname.split("/").pop();
+
+                // Function to add 'active' class to the appropriate navigation link
+                function setActiveNav() {
+                    var navLinks = document.querySelectorAll("nav ul li a");
+                    navLinks.forEach(function (link) {
+                        if (link.getAttribute("href").endsWith(currentPage)) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+
+                // Call the function to set the active navigation link
+                setActiveNav();
+
+            </script>
+
+
+            <!-- <script src="../JavaScript/index.js"></script> -->
+</body>
+
+</html>

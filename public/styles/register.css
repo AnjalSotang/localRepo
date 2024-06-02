@@ -1,0 +1,109 @@
+/* Styling for the entire page body */
+body {
+    background: #000000;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for the form container */
+.container {
+    
+    width: 400px;
+    margin: 90px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the form heading */
+#SignUpForm .lh {
+    font-size: 35px;
+    font-weight: 900; /* Adjust the font weight to your preference */
+    color: #3367D6;
+    text-align: center;
+    transition: color 0.3s ease;
+    letter-spacing: 2px; /* Adjust the letter spacing to your preference */
+}
+
+/* Hover effect for the form heading */
+#SignUpForm .lh:hover {
+    color: rgb(236, 111, 65);
+}
+
+/* Styling for the login section */
+#SignUpForm .login {
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center; /* Vertical alignment */
+    text-align: center; /* Align text within the flex container */
+}
+
+#SignUpForm .login h3 {
+    /* color: #3367D6; */
+    margin-left: 10px; /* Adjust spacing between text and link as needed */
+    font-size: 16px; /* Set font size */
+}
+
+
+/* Styling for the login link */
+#SignUpForm .login a {
+    color: #3367D6;
+    text-decoration: none;
+    margin-left: 10px; /* Adjust spacing */
+    font-size: 15px;
+}
+
+/* Styling for the form submit button */
+#SignUpForm button[type="submit"] {
+    margin-top: 5px;
+    margin-left: 100px;
+    width: calc(50% - 5px);
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Styling for a pseudo-element before the form submit button */
+#SignUpForm button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* Hover effect for the form submit button */
+#SignUpForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for the pseudo-element before the form submit button */
+#SignUpForm button:hover:before {
+    opacity: 1;
+}
+
+.input-control {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"].focus,
+input[type="password"].focus
+{
+    border-color: #007bff;
+    outline: none;
+}
+

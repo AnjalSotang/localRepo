@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-/8oH6bFrxTZ4dYqPsYV/wTKus1nup5D3G1r7SEimtTSaBjE5FhtvVZ9ZvB+PiVVXFQyVyg1vH3X0WfIKBT6jDA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Register</title>
+    <style>
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
+        }
+
+        .cont {
+            width: 100%;
+            max-width: 930px;
+            margin: 80px auto;
+            /* Adjusted margin to center the container and increased margin */
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            /* align-items: flex-start; */
+            /* background-color: #fff; */
+            /* Changed container background color to white */
+            /* border-radius: 10px; */
+            /* Added border radius */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Added box shadow */
+            /* padding: 30px; */
+            box-sizing: border-box;
+            /* Include padding in width calculation */
+            height: 400px;
+        }
+
+        .form-container,
+        .contact-info {
+            /* Adjusted width to consider margin and space between elements */
+            /* Changed background color for form and contact info */
+            padding: 20px;
+            /* margin-bottom: 100px; */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Added box shadow */
+        }
+
+        .form-container {
+            width: 50%;
+            background-color: #007bff;
+
+        }
+
+        .contact-info {
+            width: 50%;
+            background-color: #141313;
+        }
+
+        .head {
+            font-size: 34px;
+            margin-bottom: 35px;
+            /* Increased margin bottom for heading */
+            color: #007bff;
+            /* Changed heading color */
+        }
+
+        .heading {
+            font-size: 34px;
+            margin-left: 20px;
+            margin-bottom: 40px;
+            /* Increased margin bottom for heading */
+            color: #007bff;
+            /* Changed heading color */
+        }
+
+        .info-text {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: #fff;
+            display: flex;
+            /* Make it flex container */
+            align-items: center;
+            /* Align items vertically */
+        }
+
+        .info-text i {
+            margin-left: 20px;
+            font-size: 40px;
+
+            margin-right: 20px;
+            /* Adjust the space between icon and text */
+        }
+
+        .icon-text {
+            margin-left: 10px;
+            font-size: 25px;
+            /* Adjust the space between icon and text */
+        }
+
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        .btn button[type="submit"] {
+            width: calc(100% - 22px);
+            /* Adjusted width to consider border */
+            padding: 12px;
+            /* Increased padding for better appearance */
+            margin-bottom: 15px;
+            /* Increased margin bottom for input fields */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            /* Increased font size for better readability */
+            transition: border-color 0.3s;
+            /* Added transition for better interaction */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: #007bff;
+            /* Changed border color on focus */
+        }
+
+        textarea {
+            resize: vertical;
+            /* Allow vertical resizing only */
+        }
+
+
+       .btn button[type="submit"] {
+            width: calc(50% - 5px);
+            padding: 10px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .btn button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .success-message {
+    background-color: #32CD32; /* Green background */
+    color: #fff; /* White text color */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+        .error-message {
+    background-color: #f44336; /* Red background */
+    color: #fff; /* White text color */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
+}
+
+
+
+        /* Include footer styles here */
+        /* footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px; /* Added border radius */
+        /* margin-top: 30px; 
+        } */
+    </style>
+</head>
+
+<body>
+ 
+    <!-- Nav Bar Section -->
+    <%- include('partials/header') %>
+        <div class="cont">
+          
+            <div class="form-container">
+                <% if (typeof messages !=='undefined' && messages.error) { %>
+                    <div class="error-message">
+                        <p>
+                            <%= messages.error %>
+                        </p>
+                    </div>
+                    <% } %>
+                    <% if (typeof messages !== 'undefined' && messages.success) { %>
+                        <div class="success-message">
+                            <p><%= messages.success %></p>
+                        </div>
+                    <% } %>
+                <div class="head" style="color:#fff">Lets Connect</div>
+                <form id="SignUpForm" action="/auth/feedback" method="POST">
+                    <input id="name" name="name" type="text" placeholder="Enter your full name">
+                    <input id="email" name="email" type="email" placeholder="Enter your Email">
+                    <textarea id="feed" name="feed" placeholder="Give Us Your Feedback" rows="4"></textarea>
+                    <div class="btn"><button type="submit">Submit</button></div>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="heading">Contact Us</div>
+                <div class="info-text"><i class="fas fa-phone"></i><span class="icon-text">Phone: 123-456-7890</span>
+                </div>
+                <div class="info-text"><i class="far fa-envelope"></i><span class="icon-text">Email:
+                        anjal@gmail.com</span></div>
+                <div class="info-text"><i class="fab fa-instagram"></i><span class="icon-text">Instagram:
+                        @example</span></div>
+
+
+            </div>
+        </div>
+
+        <!-- Include footer -->
+        <%- include('partials/footer') %>
+            <!-- JS FOR NAV Bar -->
+    <script>
+        // Get the filename of the current page
+        var currentPage = location.pathname.split("/").pop();
+
+        // Function to add 'active' class to the appropriate navigation link
+        function setActiveNav() {
+            var navLinks = document.querySelectorAll("nav ul li a");
+            navLinks.forEach(function (link) {
+                if (link.getAttribute("href").endsWith(currentPage)) {
+                    link.classList.add("active");
+                }
+            });
+        }
+
+        // Call the function to set the active navigation link
+        setActiveNav();
+
+    </script>
+</body>
+
+</html>
